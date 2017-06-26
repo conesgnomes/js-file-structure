@@ -8,6 +8,9 @@ var uglify = require('gulp-uglify');
 var del = require('del');
 var jshint = require('gulp-jshint');
 var buildProduction = utilities.env.production;
+var browserSync = require('browser-sync').create();
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 // define task concatInterface. retrieve all files named -interface from the js folder and concat them together //
 gulp.task('concatInterface', function() {
