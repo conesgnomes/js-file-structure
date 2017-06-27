@@ -1,7 +1,6 @@
 {
   "name": "ping-pong",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -12,6 +11,8 @@
   "author": "Karina and Connor",
   "license": "ISC",
   "devDependencies": {
+    "bower-files": "^4.0.0",
+    "browser-sync": "^2.18.12",
     "browserify": "^14.4.0",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
@@ -21,5 +22,15 @@
     "gulp-util": "^3.0.8",
     "jshint": "^2.9.5",
     "vinyl-source-stream": "^1.1.0"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/conesgnomes/js-file-structure.git"
+  },
+  "bugs": {
+    "url": "https://github.com/conesgnomes/js-file-structure/issues"
+  },
+  "homepage": "https://github.com/conesgnomes/js-file-structure#readme",
+  "description": ""
 }
