@@ -9,8 +9,8 @@ var del = require('del');
 var jshint = require('gulp-jshint');
 var buildProduction = utilities.env.production;
 var browserSync = require('browser-sync').create();
-// var sass = require('gulp-sass');
-// var sourcemaps = require('gulp-sourcemaps');
+var sass = require('gulp-sass');
+var sourcemaps = require('gulp-sourcemaps');
 
 // tells bower-files where to find the bootstrap files we want
 
@@ -87,7 +87,7 @@ gulp.task("build", ['clean'], function() {
     gulp.start('jsBrowserify');
   }
   gulp.start('bower');
-  // gulp.start('cssBuild');
+  gulp.start('cssBuild');
 });
 
 // runs a built in debugger of sorts on all files in the js folder //
@@ -113,7 +113,7 @@ gulp.task('serve', ['build'], function(){
 gulp.watch(['js/*.js'], ['jsBuild']);
 gulp.watch(['bower.json'], ['bowerBuild']);
 gulp.watch(['*.html'], ['htmlBuild']);
-// gulp.watch(['scss/*.scss'], ['cssBuild']);
+gulp.watch(['scss/*.scss'], ['cssBuild']);
 });
 
 // when watching for changes, constantly updates and reloads files with browserSync.reload() //
